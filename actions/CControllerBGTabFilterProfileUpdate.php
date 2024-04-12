@@ -109,12 +109,12 @@ class CControllerBGTabFilterProfileUpdate extends CController {
 
 				break;
 
-			// case 'properties':
-			// 	$properties = [];
-			// 	parse_str($this->getInput('value_str'), $properties);
-			// 	$filter->setTabFilter($this->getInput('idx2'), $this->cleanProperties($properties));
+			case 'properties':
+				$properties = [];
+				parse_str($this->getInput('value_str'), $properties);
+				$filter->setTabFilter($this->getInput('idx2'), $this->cleanProperties($properties));
 
-			// 	break;
+				break;
 
 			case 'taborder':
 				$filter->sort($this->getInput('value_str'));
