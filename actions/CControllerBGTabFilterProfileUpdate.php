@@ -20,12 +20,12 @@
 
 namespace Modules\BGmotAR\Actions;
 
-use CController;
-use CControllerHost;
-use CControllerProblem;
-use CControllerResponseData;
-use CSettingsHelper;
-use CTabFilterProfile;
+// use CController;
+// use CControllerHost;
+// use CControllerProblem;
+// use CControllerResponseData;
+// use CSettingsHelper;
+// use CTabFilterProfile;
 
 /**
  * Controller to update tab filter. Handles following events:
@@ -37,8 +37,8 @@ use CTabFilterProfile;
 class CControllerBGTabFilterProfileUpdate extends CController {
 
 	public static $namespaces = [
-		CControllerHost::FILTER_IDX => CControllerHost::FILTER_FIELDS_DEFAULT,
-		CControllerProblem::FILTER_IDX => CControllerProblem::FILTER_FIELDS_DEFAULT,
+		// CControllerHost::FILTER_IDX => CControllerHost::FILTER_FIELDS_DEFAULT,
+		// CControllerProblem::FILTER_IDX => CControllerProblem::FILTER_FIELDS_DEFAULT,
 		CControllerBGAvailReport::FILTER_IDX => CControllerBGAvailReport::FILTER_FIELDS_DEFAULT
 	];
 
@@ -109,12 +109,12 @@ class CControllerBGTabFilterProfileUpdate extends CController {
 
 				break;
 
-			case 'properties':
-				$properties = [];
-				parse_str($this->getInput('value_str'), $properties);
-				$filter->setTabFilter($this->getInput('idx2'), $this->cleanProperties($properties));
+			// case 'properties':
+			// 	$properties = [];
+			// 	parse_str($this->getInput('value_str'), $properties);
+			// 	$filter->setTabFilter($this->getInput('idx2'), $this->cleanProperties($properties));
 
-				break;
+			// 	break;
 
 			case 'taborder':
 				$filter->sort($this->getInput('value_str'));
